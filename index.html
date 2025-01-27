@@ -1,0 +1,412 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Meenu Antony - Portfolio</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@2.15.0/dist/full.css" rel="stylesheet" type="text/css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <style>
+        .slide-in {
+            animation: slideIn 0.8s ease-out;
+        }
+
+        @keyframes slideIn {
+            from {
+                transform: translateY(50px);
+                opacity: 0;
+            }
+            to {
+                transform: translateY(0);
+                opacity: 1;
+            }
+        }
+
+        .gradient-text {
+            background: linear-gradient(45deg, #FF6B6B, #4ECDC4);
+            -webkit-background-clip: text;
+            background-clip: text;
+            color: transparent;
+        }
+    </style>
+</head>
+<body class="bg-slate-950 text-gray-100">
+    <!-- Floating side navigation instead of top navbar -->
+    <nav class="fixed right-0 top-1/2 transform -translate-y-1/2 z-50 mr-4">
+        <div class="flex flex-col space-y-6 bg-slate-900/80 backdrop-blur-sm p-4 rounded-full">
+            <button onclick="scrollToSection('home')" class="text-2xl text-gray-400 hover:text-teal-400 transition-colors">
+                <i class="fas fa-home"></i>
+            </button>
+            <button onclick="scrollToSection('about')" class="text-2xl text-gray-400 hover:text-teal-400 transition-colors">
+                <i class="fas fa-user"></i>
+            </button>
+            <button onclick="scrollToSection('education')" class="text-2xl text-gray-400 hover:text-teal-400 transition-colors">
+                <i class="fas fa-graduation-cap"></i>
+            </button>
+            <button onclick="scrollToSection('projects')" class="text-2xl text-gray-400 hover:text-teal-400 transition-colors">
+                <i class="fas fa-code-branch"></i>
+            </button>
+            <button onclick="scrollToSection('contact')" class="text-2xl text-gray-400 hover:text-teal-400 transition-colors">
+                <i class="fas fa-envelope"></i>
+            </button>
+        </div>
+    </nav>
+
+    <main>
+        <!-- Hero section with diagonal design -->
+        <section id="home" class="min-h-screen relative overflow-hidden">
+            <div class="absolute inset-0 bg-gradient-to-br from-slate-950 via-slate-900 to-slate-800"></div>
+            <div class="absolute inset-0" style="background: radial-gradient(circle at 50% 50%, rgba(66, 153, 225, 0.1) 0%, transparent 50%);"></div>
+            
+            <div class="relative container mx-auto px-6 py-32 flex items-center justify-between h-screen">
+                <!-- Text Content -->
+                <div class="flex flex-col items-start">
+                    <h1 class="text-6xl font-bold mb-4 slide-in">
+                        <span class="gradient-text">Hello, I'm</span>
+                        <br />
+                        <span class="text-white">Meenu Antony</span>
+                    </h1>
+                    <p class="text-xl text-gray-400 mb-8 max-w-xl slide-in">
+                        Full Stack Developer specializing in elegant solutions through clean code and innovative design. Skilled in both frontend and backend technologies, 
+                        I build scalable, user-focused applications using modern tools and frameworks.
+                    </p>
+                    <div class="flex gap-4 slide-in">
+                        <a href="#projects" class="px-8 py-3 bg-teal-500 hover:bg-teal-600 rounded-full transition-colors">
+                            View My Work
+                        </a>
+                        <a href="resume.pdf" target="_blank" class="px-8 py-3 border border-teal-500 text-teal-500 hover:bg-teal-500 hover:text-white rounded-full transition-all">
+                            View Resume
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Image Container -->
+                <div class="relative w-[400px] h-[400px] hidden md:block">
+                    <div class="absolute inset-0 bg-teal-400/20 rounded-full blur-3xl"></div>
+                    <img src="image1.jpg" alt="Meenu Antony" class="relative w-full h-full object-cover rounded-full shadow-2xl ml-0" style="margin-left:-100px;">
+                    <!-- Decorative Elements -->
+                    <div class="absolute -bottom-4 -right-4 w-72 h-72 bg-gradient-to-t from-teal-500/20 to-transparent rounded-full -z-10"></div>
+                    <div class="absolute -top-4 -left-4 w-72 h-72 bg-gradient-to-b from-blue-500/20 to-transparent rounded-full -z-10"></div>
+                </div>
+            </div>
+            
+            <!-- Decorative elements -->
+            <div class="absolute bottom-0 right-0 w-1/3 h-1/3 bg-gradient-to-t from-teal-500/20 to-transparent rounded-tl-full"></div>
+        </section>
+
+        <!-- About section with cards layout -->
+        <section id="about" class="py-20 bg-slate-900">
+            <div class="container mx-auto px-6">
+                <h2 class="text-4xl font-bold mb-16 text-center">
+                    <span class="gradient-text">About Me</span>
+                </h2>
+                
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-12">
+                    <div class="bg-slate-800/50 backdrop-blur-sm p-8 rounded-2xl hover:transform hover:scale-105 transition-all">
+                        <p class="text-gray-300 leading-relaxed">
+                            I'm a passionate Full Stack Developer with a keen eye for detail and a strong commitment to creating high-quality, functional web applications. I thrive in both frontend and backend development, with a deep understanding of various technologies that help me deliver seamless digital experiences.
+                        </p>
+                        <p class="text-gray-300 leading-relaxed mt-4">
+                            Whether it's solving complex problems or collaborating with teams to bring ideas to life, I aim to create solutions that are efficient, user-friendly, and scalable. I'm always eager to learn new skills and keep up with the latest trends in web development to enhance my projects.
+                        </p>
+                    </div>
+                    <div class="bg-slate-800/50 backdrop-blur-sm p-8 rounded-2xl hover:transform hover:scale-105 transition-all">
+                        <h3 class="text-2xl font-semibold mb-4 text-teal-400">Skills</h3>
+                        <div class="grid grid-cols-2 gap-8">
+                            <div>
+                                <ul class="text-gray-300 space-y-4">
+                                    <li class="flex items-center gap-3">
+                                        <i class="fas fa-code text-teal-400 w-6 text-center"></i>
+                                        <span>HTML5 / CSS3</span>
+                                    </li>
+                                    <li class="flex items-center gap-3">
+                                        <i class="fab fa-js-square text-teal-400 w-6 text-center"></i>
+                                        <span>JavaScript</span>
+                                    </li>
+                                    <li class="flex items-center gap-3">
+                                        <i class="fas fa-sync text-teal-400 w-6 text-center"></i>
+                                        <span>AJAX</span>
+                                    </li>
+                                    <li class="flex items-center gap-3">
+                                        <i class="fas fa-dollar-sign text-teal-400 w-6 text-center"></i>
+                                        <span>jQuery</span>
+                                    </li>
+                                    <li class="flex items-center gap-3">
+                                        <i class="fab fa-python text-teal-400 w-6 text-center"></i>
+                                        <span>Python</span>
+                                    </li>
+                                    <li class="flex items-center gap-3">
+                                        <i class="fab fa-bootstrap text-teal-400 w-6 text-center"></i>
+                                        <span>Bootstrap</span>
+                                    </li>
+                                </ul>
+                            </div>
+                            <div>
+                                <ul class="text-gray-300 space-y-4">
+                                    <li class="flex items-center gap-3">
+                                        <i class="fab fa-python text-teal-400 w-6 text-center"></i>
+                                        <span>Django</span>
+                                    </li>
+                                    
+                                    <li class="flex items-center gap-3">
+                                        <i class="fab fa-java text-teal-400 w-6 text-center"></i>
+                                        <span>Java</span>
+                                    </li>
+                                    <li class="flex items-center gap-3">
+                                        <i class="fab fa-php text-teal-400 w-6 text-center"></i>
+                                        <span>PHP</span>
+                                    </li>
+                                    <li class="flex items-center gap-3">
+                                        <i class="fas fa-database text-teal-400 w-6 text-center"></i>
+                                        <span>SQL / NoSQL</span>
+                                    </li>
+                                    <li class="flex items-center gap-3">
+                                        <i class="fas fa-leaf text-teal-400 w-6 text-center"></i>
+                                        <span>MongoDB</span>
+                                    </li>
+                                    <li class="flex items-center gap-3">
+                                        <i class="fas fa-database text-teal-400 w-6 text-center"></i>
+                                        <span>MariaDB</span>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Education Section -->
+        <section id="education" class="py-20 bg-slate-900/50">
+            <div class="container mx-auto px-6">
+                <h2 class="text-4xl font-bold mb-16 text-center">
+                    <span class="gradient-text">Education</span>
+                </h2>
+                
+                <div class="flex flex-wrap justify-center gap-8">
+                    <!-- MCA -->
+                    <div class="bg-slate-800/50 backdrop-blur-sm p-8 rounded-2xl hover:transform hover:scale-105 transition-all flex-1">
+                        <div class="flex items-start gap-4">
+                            <div class="text-teal-400 mt-1">
+                                <i class="fas fa-graduation-cap text-2xl"></i>
+                            </div>
+                            <div>
+                                <h3 class="text-xl font-semibold text-teal-400">Master in Computer Application</h3>
+                                <p class="text-gray-400">2020 - 2025</p>
+                                <p class="text-gray-300 mt-2">Amal Jyothi College of Engineering (Autonomous), Kanjirappally</p>
+                                <p class="text-gray-400">APJ Abdul Kalam Technological University</p>
+                                <p class="text-gray-300 mt-2">Percentage: <span class="text-teal-400">80.7%</span></p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Higher Secondary -->
+                    <div class="bg-slate-800/50 backdrop-blur-sm p-8 rounded-2xl hover:transform hover:scale-105 transition-all flex-1">
+                        <div class="flex items-start gap-4">
+                            <div class="text-teal-400 mt-1">
+                                <i class="fas fa-school text-2xl"></i>
+                            </div>
+                            <div>
+                                <h3 class="text-xl font-semibold text-teal-400">Higher Secondary</h3>
+                                <p class="text-gray-400">2018 - 2020</p>
+                                <p class="text-gray-300 mt-2">St. Thomas Higher Secondary School, Erumely</p>
+                                <p class="text-gray-400">Board of Higher Secondary Examination</p>
+                                <p class="text-gray-300 mt-2">Percentage: <span class="text-teal-400">87%</span></p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- High School -->
+                    <div class="bg-slate-800/50 backdrop-blur-sm p-8 rounded-2xl hover:transform hover:scale-105 transition-all flex-1 mx-auto">
+                        <div class="flex items-start gap-4">
+                            <div class="text-teal-400 mt-1">
+                                <i class="fas fa-school text-2xl"></i>
+                            </div>
+                            <div>
+                                <h3 class="text-xl font-semibold text-teal-400">High School</h3>
+                                <p class="text-gray-400">2018</p>
+                                <p class="text-gray-300 mt-2">St. Mary's Girls High School, Kanjirappally</p>
+                                <p class="text-gray-400">Kerala Board of Public Examination</p>
+                                <p class="text-gray-300 mt-2">Percentage: <span class="text-teal-400">84%</span></p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Projects Section -->
+        <section id="projects" class="py-20 bg-slate-900">
+            <div class="container mx-auto px-6">
+                <h2 class="text-4xl font-bold mb-16 text-center">
+                    <span class="gradient-text">Projects</span>
+                </h2>
+
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-5xl mx-auto">
+                    <!-- AveLux Project -->
+                    <div class="bg-slate-800/50 backdrop-blur-sm p-8 rounded-2xl hover:transform hover:scale-105 transition-all duration-300">
+                        <div class="space-y-4">
+                            <h3 class="text-2xl font-semibold text-teal-400">AveLux</h3>
+                            <p class="text-gray-300">Parlour Online Appointment Booking</p>
+                            
+                            <!-- Tech Stack -->
+                            <div class="flex flex-wrap gap-2 mt-4">
+                                <span class="px-3 py-1 bg-slate-700/50 rounded-full text-sm text-teal-400">HTML</span>
+                                <span class="px-3 py-1 bg-slate-700/50 rounded-full text-sm text-teal-400">CSS</span>
+                                <span class="px-3 py-1 bg-slate-700/50 rounded-full text-sm text-teal-400">Bootstrap</span>
+                                <span class="px-3 py-1 bg-slate-700/50 rounded-full text-sm text-teal-400">JavaScript</span>
+                                <span class="px-3 py-1 bg-slate-700/50 rounded-full text-sm text-teal-400">AJAX</span>
+                                <span class="px-3 py-1 bg-slate-700/50 rounded-full text-sm text-teal-400">PHP</span>
+                                <span class="px-3 py-1 bg-slate-700/50 rounded-full text-sm text-teal-400">MySQL</span>
+                            </div>
+
+                            <!-- Project Links -->
+                            <div class="flex gap-4 mt-6">
+                                <a href="#" class="flex items-center gap-2 text-teal-400 hover:text-teal-300 transition-colors">
+                                    <!-- <i class="fas fa-link"></i>
+                                    <span>Live Demo</span> -->
+                                </a>
+                                <a href="https://github.com/intmcaMeenu/AveLux" target="_blank" class="flex items-center gap-2 text-teal-400 hover:text-teal-300 transition-colors">
+                                    <i class="fab fa-github"></i>
+                                    <span>Source Code</span>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Cattle Care Project -->
+                    <div class="bg-slate-800/50 backdrop-blur-sm p-8 rounded-2xl hover:transform hover:scale-105 transition-all duration-300">
+                        <div class="space-y-4">
+                            <h3 class="text-2xl font-semibold text-teal-400">Cattle Care</h3>
+                            <p class="text-gray-300">Cattle Marketplace and Management System</p>
+                            
+                            <!-- Tech Stack -->
+                            <div class="flex flex-wrap gap-2 mt-4">
+                                <span class="px-3 py-1 bg-slate-700/50 rounded-full text-sm text-teal-400">HTML</span>
+                                <span class="px-3 py-1 bg-slate-700/50 rounded-full text-sm text-teal-400">CSS</span>
+                                <span class="px-3 py-1 bg-slate-700/50 rounded-full text-sm text-teal-400">JavaScript</span>
+                                <span class="px-3 py-1 bg-slate-700/50 rounded-full text-sm text-teal-400">jQuery</span>
+                                <span class="px-3 py-1 bg-slate-700/50 rounded-full text-sm text-teal-400">Django</span>
+                                <span class="px-3 py-1 bg-slate-700/50 rounded-full text-sm text-teal-400">MariaDB</span>
+                            </div>
+
+                            <!-- Project Links -->
+                            <div class="flex gap-4 mt-6">
+                                <a href="" class="flex items-center gap-2 text-teal-400 hover:text-teal-300 transition-colors">
+                                    <!-- <i class="fas fa-link"></i>
+                                    <span>Live Demo</span> -->
+                                </a>
+                                <a href="https://github.com/intmcaMeenu/cattledeployment"  target="_blank" class="flex items-center gap-2 text-teal-400 hover:text-teal-300 transition-colors">
+                                    <i class="fab fa-github"></i>
+                                    <span>Source Code</span>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact Section -->
+        <section id="contact" class="py-20 bg-slate-900/50">
+            <div class="container mx-auto px-6">
+                <h2 class="text-4xl font-bold mb-16 text-center">
+                    <span class="gradient-text">Contact Me</span>
+                </h2>
+
+                <div class="max-w-3xl mx-auto">
+                    <!-- Contact Card -->
+                    <div class="bg-slate-800/50 backdrop-blur-sm p-10 rounded-3xl shadow-2xl">
+                        <!-- Contact Grid -->
+                        <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                            <!-- Left Column -->
+                            <div class="space-y-8">
+                                <!-- Phone -->
+                                <div class="group">
+                                    <a href="tel:+916282397928" class="flex items-center gap-6 p-4 rounded-xl hover:bg-slate-700/50 transition-all duration-300">
+                                        <div class="bg-teal-400/10 p-4 rounded-full group-hover:bg-teal-400/20 transition-all">
+                                            <i class="fas fa-phone text-2xl text-teal-400"></i>
+                                        </div>
+                                        <div>
+                                            <h3 class="text-gray-400 text-sm mb-1">Phone</h3>
+                                            <p class="text-gray-100 text-lg">+91 62823 97928</p>
+                                        </div>
+                                    </a>
+                                </div>
+
+                                <!-- Email -->
+                                <div class="group">
+                                    <a href="mailto:meenuantony1109@gmail.com" class="flex items-center gap-6 p-4 rounded-xl hover:bg-slate-700/50 transition-all duration-300">
+                                        <div class="bg-teal-400/10 p-4 rounded-full group-hover:bg-teal-400/20 transition-all">
+                                            <i class="fas fa-envelope text-2xl text-teal-400"></i>
+                                        </div>
+                                        <div>
+                                            <h3 class="text-gray-400 text-sm mb-1">Email</h3>
+                                            <p class="text-gray-100 text-lg">meenuantony1109@gmail.com</p>
+                                        </div>
+                                    </a>
+                                </div>
+
+                                <!-- Location -->
+                                <div class="group">
+                                    <div class="flex items-center gap-6 p-4 rounded-xl">
+                                        <div class="bg-teal-400/10 p-4 rounded-full">
+                                            <i class="fas fa-map-marker-alt text-2xl text-teal-400"></i>
+                                        </div>
+                                        <div>
+                                            <h3 class="text-gray-400 text-sm mb-1">Location</h3>
+                                            <p class="text-gray-100 text-lg">Kottayam, Kerala, India</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Right Column -->
+                            <div class="space-y-8">
+                                <!-- LinkedIn -->
+                                <div class="group">
+                                    <a href="https://linkedin.com/in/meenu-antony" target="_blank" class="flex items-center gap-6 p-4 rounded-xl hover:bg-slate-700/50 transition-all duration-300">
+                                        <div class="bg-teal-400/10 p-4 rounded-full group-hover:bg-teal-400/20 transition-all">
+                                            <i class="fab fa-linkedin text-2xl text-teal-400"></i>
+                                        </div>
+                                        <div>
+                                            <h3 class="text-gray-400 text-sm mb-1">LinkedIn</h3>
+                                            <p class="text-gray-100 text-lg">linkedin/meenu-antony</p>
+                                        </div>
+                                    </a>
+                                </div>
+
+                                <!-- GitHub -->
+                                <div class="group">
+                                    <a href="https://github.com/intmcaMeenu" target="_blank" class="flex items-center gap-6 p-4 rounded-xl hover:bg-slate-700/50 transition-all duration-300">
+                                        <div class="bg-teal-400/10 p-4 rounded-full group-hover:bg-teal-400/20 transition-all">
+                                            <i class="fab fa-github text-2xl text-teal-400"></i>
+                                        </div>
+                                        <div>
+                                            <h3 class="text-gray-400 text-sm mb-1">GitHub</h3>
+                                            <p class="text-gray-100 text-lg">github.com/intmcaMeenu</p>
+                                        </div>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <script>
+        function scrollToSection(sectionId) {
+            const element = document.getElementById(sectionId);
+            if (element) {
+                element.scrollIntoView({
+                    behavior: 'smooth',
+                    block: 'start'
+                });
+            }
+        }
+    </script>
+</body>
+</html>
